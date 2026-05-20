@@ -66,9 +66,12 @@ class ProcesadorDICOM:
             try:
                 pixels = ds.pixel_array
 
-                # Si es imagen 3D (multi-frame), tomar el primer corte
+                # Manejar imágenes 3D: RGB (H,W,3) o multi-frame (frames,H,W)
                 if pixels.ndim == 3:
-                    pixels = pixels[0]
+                    if pixels.shape[2] in (3, 4):  # RGB o RGBA
+                        pixels = cv2.cvtColor(pixels, cv2.COLOR_RGB2GRAY)
+                    else:  # multi-frame: tomar el primer corte
+                        pixels = pixels[0]
 
                 # 1. Normalización a uint8 (0-255)
                 p_min, p_max = pixels.min(), pixels.max()
