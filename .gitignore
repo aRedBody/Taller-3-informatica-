@@ -1,0 +1,18 @@
+# Archivos generados por el programa
+imagenes_procesadas/
+resultados_dicom.csv
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+
+# VS Code
+.vscode/
+
+# Sistema
+.DS_Store
+Thumbs.db
