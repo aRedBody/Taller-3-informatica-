@@ -1,8 +1,6 @@
 # Taller 3 – Informática Médica: Procesador DICOM
 
-**Integrante:** Juan  
-**Materia:** Informática 2 – Unidad 3  
-**Monitor:** Juan Esteban Pineda Lopera
+**Integrante:** Juan Andrés Contreras Tobar
 
 ---
 
